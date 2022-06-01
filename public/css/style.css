@@ -1,0 +1,44 @@
+.mainDiv{
+    position:absolute;
+    width: 900px;
+    height: 600px;
+    background-color: black;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border: 2px white solid;
+    border-radius: 20px;
+}
+body{
+    background-color: gray;
+}
+.tabley{
+    position: fixed;
+    width: 800px;
+    height: 600px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.tabley tr td div{
+    transition: 0.5s background-color;
+    background-color: gray;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    vertical-align: middle;
+    line-height: 200px;
+    color: white;
+}
+.tabley tr td div:hover{
+    background-color: black;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
