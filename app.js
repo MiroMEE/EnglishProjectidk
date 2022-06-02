@@ -15,5 +15,8 @@ app.get('/',(req,res)=>{
 app.get('/first',(req,res)=>{
     return res.render('first.ejs');
 })
+app.get('/second',(req,res)=>{
+    return res.render('second.ejs')
+})
 
 app.listen(PORT,()=>{console.log("yes")});

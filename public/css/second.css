@@ -1,0 +1,20 @@
+.mainDiv{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    width: 1520px;
+    height: 940px;
+    background-color: gray;
+}
+.dbar{
+    height: 10%;
+    background-color: gainsboro;
+    font-size: 72px;
+
+}
+.dqeust{
+    height: 90%;
+    background-color: aqua;
+    opacity: 0.5;
+}
