@@ -2,6 +2,7 @@ const arr = [["far","further"],["bad","worse"]]
 const randNum1 = []
 const randNum2 = []
 const mainDiv = document.querySelector('.firstdiv');
+let counter = null;
 const getY = (num,arr)=>{
     while (arr.length!=num){
         let s = Math.floor(Math.random() * (num - 0) ) + 0;
@@ -17,6 +18,7 @@ const getY = (num,arr)=>{
         
     }
 }
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 creatorNEVIMNECEHO(2)
 function creatorNEVIMNECEHO(x){
     getY(9,randNum1)
@@ -40,11 +42,13 @@ function creatorNEVIMNECEHO(x){
 }
 const ff1 = document.querySelector('#ff1');
 const ff2 = document.querySelector('#ff2');
+const forf = document.querySelector('.forfun');
 let jedna = null;
 let dva = null;
 let xy = null
 let yx = null
 function check(x){
+    x.style.opacity = 0.25
     for(let i=0;i<arr.length;i++){
         for(let j=0;j<2;j++){
             if(x.innerText==arr[i][j]){
@@ -64,22 +68,34 @@ function check(x){
     }
     }
 }
+const imgcom = document.querySelector('.IMAGINETRYTOLIVE');
 function catomania(){
-    console.log(dva)
-    console.log(jedna)
-
     if(jedna==dva&&jedna!=null&&dva!=null){
-        console.log("point")
-        xy.remove()
-        yx.remove()
-        jedna = null
-        dva = null
+        console.log(Number(counter+=1) + "/" + arr.length);
+        if(counter==arr.length){
+            imgcom.style.display = "block";
+        }
+        xy.remove();
+        yx.remove();
+        jedna = null;
+        dva = null;
+        tiemsa()
         ff1.innerText = "";
         ff2.innerText = "";
     } else if(jedna!=dva&&jedna!=null&&dva!=null){
+        xy.style.opacity = 1;
+        yx.style.opacity = 1;
         jedna = null
         dva = null
         ff1.innerText = "";
         ff2.innerText = "";
     }
+}
+async function tiemsa(){
+    forf.style.transition = "border 0.5s, background 0.5s";
+    forf.style.border = "solid black 2px";
+    forf.style.backgroundColor = "white";
+    await sleep(1000)
+    forf.style.border = "solid whitesmoke 2px";
+    forf.style.backgroundColor = "black";
 }
