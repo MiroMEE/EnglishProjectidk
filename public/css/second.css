@@ -4,23 +4,70 @@
     left: 50%;
     top: 50%;
     width: 1520px;
-    height: 940px;
     background-color: gray;
+    border-radius: 10px;
+    padding: 10px;
 }
 .dbar{
+    border: white solid 1px;
     height: 10%;
     background-color: gainsboro;
     font-size: 72px;
+    padding: 10px;
 
 }
 .dqeust{
-    height: 90%;
-    background-color: aqua;
-    opacity: 0.5;
+    border: white solid 1px;
+    background-color: rgb(101, 101, 101);
 }
 #questions{
+    font-size: 48px;
 }
 #answers{
+    transition: background-color 0.2s;
+    position: relative;
+    margin-left: 40px;
     float: left;
-    padding-left: 25px;
+    font-size: 72px;
+    cursor: pointer;
+    background-color: gray;
+    border: black solid 3px;
+    color: white;
+    border-radius: 20px;
+}
+#answers:hover{
+    background-color: black;
+}
+.oj{
+    height: 200px;
+    padding-left: 100px;
+    background-color: gold;
+    margin: 10px;
+    border-radius: 10px;
+}
+.score{
+    position: fixed;
+    text-align: center;
+    padding: 25px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 50%;
+}
+#spravne{
+    background-color: greenyellow;
+    float: left;
+}
+#spatne{
+    background-color: red;
+    float: right;
+}
+#spatne,#spravne{
+    font-family: sans-serif;
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    height: 40%;
+    width: 40%;
+    border: black solid 2px;
+    border-radius: 50px;
 }
