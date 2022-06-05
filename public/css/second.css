@@ -18,3 +18,9 @@
     background-color: aqua;
     opacity: 0.5;
 }
+#questions{
+}
+#answers{
+    float: left;
+    padding-left: 25px;
+}
