@@ -1,7 +1,18 @@
 const mainDiv = document.querySelector('.mainDiv');
 const dbar = document.querySelector('.dbar');
 const dsv = document.querySelector('.dqeust');
-const arr = [["What ___ you doing?","are","is","it"],["Hello ___ are you doing?","what","is","it"]];
+const arr = [
+    ["I eat ____ cakes.", "too many", "too much", "too"],
+    ["I don´t drink _____ water.","enough", "too many", "too much"],
+    ["I spend ____ time on my phone.", "too much", "too", "too many"],
+    ["I can´t drink it. It´s ____ hot.","too","enough","too many"],
+    ["I think they talk ____ .", "too much", "too many", "too"],
+    ["The box isn´t ____ .","big enough","enough big", "too much big"],
+    ["She doesn´t ____ .", "go out enough","enough go out", "go out too many"],
+    ["They work ____, they need a break.", "too much", "too many", "not enough"],
+    ["You are ____ for this.", "too old", "too many old", "old too"],
+    ["He is asking ____ questions.", "too many", "too", "too much"]
+    ];
 const memory = [];
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let spravne = 0;
