@@ -1,5 +1,15 @@
-.firstdiv{
+.w{
     background-color: limegreen;
+    background-image: url('/img/bckg.jpg');
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 1536px;
+    height: 864px;
+    filter: blur(5px);
+}
+.firstdiv{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -35,8 +45,8 @@
     left: 50%;
     width: 400px;
     height: 75px;
-    background-color: black;
     position: fixed;
+    background-color: gray;
     color: white;
     font-family: sans-serif;
     vertical-align: middle;
@@ -105,4 +115,30 @@
 a{
     text-decoration: none;
     color: black;
+}
+.scoreboard{
+    background-image: url('/img/catos.jpg');
+    background-size: 150px;
+    z-index: 8;
+    top: 1%;
+    right: 1%;
+    position: absolute;
+    padding: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    color: white;
+    border-radius: 40%;
+    border: rgb(51, 53, 51) solid 4px;
+
+}
+.scoreboard p{
+    position: relative;
+    top: -20%;
+    transform: translateY(-50%);
+    font-size: 72px;
+    font-family: fantasy;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
 }
