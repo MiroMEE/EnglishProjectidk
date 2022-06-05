@@ -1,47 +1,70 @@
+body{
+
+}
 .mainDiv{
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
     top: 200px;
     width: 1520px;
-    background-color: gray;
+    background-color: rgb(250, 229, 229);
     border-radius: 10px;
     padding: 10px;
 }
 .dbar{
     border: white solid 1px;
     height: 10%;
-    background-color: gainsboro;
+    background-color: rgb(253, 244, 112);
     font-size: 72px;
     padding: 10px;
 
 }
 .dqeust{
     border: white solid 1px;
-    background-color: rgb(101, 101, 101);
+    background-color: rgb(136, 126, 32);
 }
 #questions{
-    font-size: 48px;
+    font-size: 38px;
+    font-family:sans-serif;
+}
+#quesarstra{
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    float: left;
+    background-color: white;
+    border: black solid;
+    border-radius: 5px;
+    width: fit-content;
 }
 #answers{
-    transition: background-color 0.2s;
+    top: 50%;
+    transform: translateY(-50%);
+    width: max-content;
+    transition: background-color 0.2s, border 0.5s;
     position: relative;
     margin-left: 40px;
-    float: left;
-    font-size: 72px;
+    float: right;
+    margin-right: 10px;
     cursor: pointer;
     background-color: gray;
     border: black solid 3px;
-    color: white;
-    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    padding-right: 70px;
+    background-color: rgb(114, 114, 109);
 }
 #answers:hover{
     background-color: black;
+    border: white solid 3px;
 }
 .oj{
-    height: 200px;
-    padding-left: 100px;
-    background-color: gold;
+    height: 125px;
+    background-color: rgb(255, 232, 101);
     margin: 10px;
     border-radius: 10px;
 }
@@ -70,4 +93,48 @@
     width: 40%;
     border: black solid 2px;
     border-radius: 50px;
+}
+.IMAGINETRYTOLIVE img{
+    transition: 0.5s border;
+    width: 300px;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border: solid greenyellow 2px;
+}
+.IMAGINETRYTOLIVE img:hover{
+    opacity: 0.8;
+    border: solid black 2px;
+}
+.IMAGINETRYTOLIVE:hover #imgComple{
+    opacity: 0.8;
+    border: black solid 1px;
+}
+.IMAGINETRYTOLIVE{
+    display: none;
+}
+#imgComple:hover{
+    cursor: pointer;
+    border-radius: 30px;
+}
+#imgComple{
+    transition: 0.50s opacity, border-radius 0.5s;
+    opacity: 0;
+    background-color: greenyellow;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 72px;
+    font-family: sans-serif;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

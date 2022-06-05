@@ -1,8 +1,12 @@
-const arr = [["far","further"],["bad","worse"]];
+const arr = [["far","further"],["bad","worse"],["quick","the quickest"],["funny","funnier"],["cold","colder"],["amazing","the most amazing"],["stressed","more stressed"],["hot","hotter"],["good","the best"]];
 const randNum1 = []
 const randNum2 = []
 const mainDiv = document.querySelector('.firstdiv');
 let counter = null;
+let ew = 5;
+let velikost = 240;
+let zavut = 100;
+let mina = 150;
 const w = document.querySelector('.w');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -31,24 +35,24 @@ creatorNEVIMNECEHO(arr.length)
 
 //tohle nevim
 function creatorNEVIMNECEHO(x){
-    getY(9,randNum1)
-    getY(9,randNum2)
-    for(let as=0;as<x/9;as++){
-        for(let i=0;i<9;i++){
-            if(x==i+as*9){
+    getY(ew,randNum1)
+    getY(ew,randNum2)
+    for(let as=0;as<x/ew;as++){
+        for(let i=0;i<ew;i++){
+            if(x==i+as*ew){
                 break
             }
             for(let j=0;j<2;j++){
                 const divc = document.createElement('div');
                 divc.className = "zivot";
-                divc.innerText = arr[i+(as*9)][j];
+                divc.innerText = arr[i+(as*ew)][j];
                 mainDiv.append(divc);
                 if(j==0){
-                    divc.style.top = randNum2[i] * 80 + "px";
-                    divc.style.left = divc.offsetLeft+(100*as) + "px";                   
+                    divc.style.top = zavut+randNum2[i] * mina + "px";
+                    divc.style.left = divc.offsetLeft+(velikost*as) + "px";                   
                 } else{
-                    divc.style.left = 1536-115-(100*as) + "px"
-                    divc.style.top = randNum1[i] * 80 + "px";
+                    divc.style.left = 1536-velikost-(velikost*as) + "px"
+                    divc.style.top = zavut+randNum1[i] * mina + "px";
                 }
                 divc.setAttribute('onclick','check(this)');
             }

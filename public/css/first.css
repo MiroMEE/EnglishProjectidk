@@ -21,15 +21,15 @@
     transition: 0.2s background-color;
     position: absolute;
     background-color: rgb(70, 87, 73);
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 200px;
     color: white;
     padding: 10px;
-    margin:10px;
+    margin: 10px;
     border-radius: 10px;
     font-size: larger;
     vertical-align: middle;
-    line-height: 75px;
+    line-height: 50px;
     text-align: center;
     font-family: sans-serif;
 }
