@@ -109,7 +109,7 @@ function process(th,i){
 }
 const imgcom = document.querySelector('.IMAGINETRYTOLIVE');
 async function spravneaddanimation(th){
-    dbar.innerText = "Questions from Poland: "+ Number(arr.length-dsv.childNodes.length+1)+'/'+arr.length
+    dbar.innerText = "Questions: "+ Number(arr.length-dsv.childNodes.length+1)+'/'+arr.length
     if(Number(arr.length-dsv.childNodes.length+1)==arr.length){
         imgcom.style.display = "block";
         mainDiv.style.transition = 'filter 0.5s'

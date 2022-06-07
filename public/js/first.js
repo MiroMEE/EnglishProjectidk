@@ -1,4 +1,13 @@
-const arr = [["far","further"],["bad","worse"],["quick","the quickest"],["funny","funnier"],["cold","colder"],["amazing","the most amazing"],["stressed","more stressed"],["hot","hotter"],["good","the best"]];
+const arr = [
+    ["far","further"],["bad","worse"],["quick","the quickest"],["funny","funnier"],["cold","colder"],
+    ["amazing","the most amazing"],["stressed","more stressed"],["hot","hotter"],["good","the best"],
+    ["short","shorter"],["busy","busier"],["relaxed","more relaxed"],["thin","thinner"],["healthy","healthier"],
+    ["beautiful","the most beautiful"]
+
+
+
+];
+
 const randNum1 = []
 const randNum2 = []
 const mainDiv = document.querySelector('.firstdiv');
