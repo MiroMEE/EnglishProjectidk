@@ -3,18 +3,18 @@ const dbar = document.querySelector('.dbar');
 const dsv = document.querySelector('.dqeust');
 const arr = [
     ["I eat ___ cakes.", "too many", "too much", "too"],
-    ["I don´t drink ___ water.","enough", "too many", "too much"],
+    ["I don't drink ___ water.","enough", "too many", "too much"],
     ["I spend ___ time on my phone.", "too much", "too", "too many"],
-    ["I can´t drink it. It´s ___ hot.","too","enough","too many"],
+    ["I can't drink it. It's ___ hot.","too","enough","too many"],
     ["I think they talk ___.", "too much", "too many", "too"],
-    ["The box isn´t ___.","big enough","enough big", "too much big"],
-    ["She doesn´t ___.", "go out enough","enough go out", "go out too many"],
+    ["The box isn't ___.","big enough","enough big", "too much big"],
+    ["She doesn't ___.", "go out enough","enough go out", "go out too many"],
     ["They work ___, they need a break.", "too much", "too many", "not enough"],
     ["You are ___ for this.", "too old", "too many old", "old too"],
     ["He is asking ___ questions.", "too many", "too", "too much"]
     ];
 const memory = [];
-const sleep = ms => new Promise(r => setTimeout(r, ms));
+const sleep = ms => console.log("off")//new Promise(r => setTimeout(r, ms));
 let spravne = 0;
 let spatne = 0;
 const addSpravne = (x,value)=>{
@@ -57,6 +57,8 @@ function creatorQuestions(how_many){
         const oj = document.createElement('div');
         oj.className = "oj";
         oj.id = 'ojojoj'+i;
+        oj.style.background = `rgb(255,255,${225-30*i})`;
+        oj.style.border =`solid rgb(255, 205, 70) 4px`;
         dsv.append(oj);
         const crtdiv = document.createElement('div');
         oj.append(crtdiv);
@@ -97,8 +99,11 @@ async function check(th){
         th.style.transition = "opacity 0.5s";
         th.style.opacity = 0;
         z[i]=th.parentNode.childNodes.length-2;
-        await sleep(500)
+        mainDiv.style.transition = "background 0.2s"
+        mainDiv.style.background = "red";
+        await sleep(200)
         th.remove()
+        mainDiv.style.background = "whitesmoke";
     }
 }
 function process(th,i){
@@ -111,16 +116,23 @@ const imgcom = document.querySelector('.IMAGINETRYTOLIVE');
 async function spravneaddanimation(th){
     dbar.innerText = "Questions: "+ Number(arr.length-dsv.childNodes.length+1)+'/'+arr.length
     if(Number(arr.length-dsv.childNodes.length+1)==arr.length){
-        imgcom.style.display = "block";
-        mainDiv.style.transition = 'filter 0.5s'
-        mainDiv.style.filter = 'blur(10px)';
+        document.querySelector('#score1').value = spravne;
+        document.querySelector('#score2').value = spatne;
+
+        //imgcom.style.display = "block";
+        // mainDiv.style.transition = 'filter 0.5s'
+        // mainDiv.style.filter = 'blur(10px)';
+        document.querySelector('.username').style.display = "block";
     }
     th.setAttribute('onclick','');
     th.parentNode.style.opacity = 1;
     th.parentNode.style.transition = "opacity 0.5s";
     th.parentNode.style.opacity = 0;
-    await sleep(500)
-    th.parentNode.remove()
+    th.parentNode.remove();
+    mainDiv.style.transition = "background 0.2s"
+    mainDiv.style.background = "greenyellow";
+    await sleep(200);
+    mainDiv.style.background = "whitesmoke";
 }
 
 function rnado(d){
